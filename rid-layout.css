@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff; 
+  position: relative;
+}
+
+body::before {
+  display: none;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* equal width columns */
+  grid-template-rows: 1fr 1fr auto; /* two rows + bottom row */
+  gap: 20px;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Grid items */
+.box {
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+/* Left column spanning two rows */
+.box1 {
+  grid-row: 1 / span 2;
+  background: steelblue;
+  color: #fff;
+}
+
+/* Top right */
+.box2 {
+  background: crimson;
+  color: #fff;
+}
+
+/* Bottom right */
+.box3 {
+  background: forestgreen;
+  color: #f0f0f0;
+}
+
+/* Bottom full width */
+.box4 {
+  grid-column: 1 / span 2;
+  background: gold;
+  color: #000;
+}
